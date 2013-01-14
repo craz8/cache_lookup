@@ -2,6 +2,8 @@ require "cache_lookup/version"
 require 'active_support/core_ext'
 require 'active_support/cache'
 
+require 'cache_lookup/railtie.rb' if defined?(Rails)
+
 module CacheLookup
   extend ActiveSupport::Concern
 
