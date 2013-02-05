@@ -2,7 +2,7 @@
 
 Provide an alternative to **ActiveRecord#find** that uses the Rails cache to store retrieved items to reduce database load and increase
 performance for subsequent lookups for the same item.  **CacheLookup** also provides cache expiry for items when they are updated
-or deleted from teh database. 
+or deleted from the database. 
 
 ## Installation
 
