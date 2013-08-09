@@ -64,6 +64,10 @@ end
 The method **lookup_by_<attribute>** will be added to your model.  In the above example, this will be **lookup_by_id**.  When used with the 'id' attribute,
 this can be a direct replacement for Model.find(id).
 
+#### Model#lookup_by_<attribute>!
+
+Similar to **find_by_<attribute>!**, this will raise an `ActiveRecord::RecordNotFound` if a matching record is not found.
+
 ## Contributing
 
 1. Fork it

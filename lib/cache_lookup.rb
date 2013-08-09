@@ -26,6 +26,11 @@ module CacheLookup
         end
       end
 
+      # Post.lookup_by_id!
+      define_singleton_method("lookup_by_#{attribute}!") do |param|
+        self.send("lookup_by_#{attribute}",param) || raise(ActiveRecord::RecordNotFound, "Couldn't find #{name} with #{attribute} #{param}")
+      end
+
       # Post.cache_key_for_id
       define_singleton_method("cache_key_for_#{attribute}") do |param|
         "#{name}:#{attribute}:" + param.to_s
